@@ -1,6 +1,6 @@
 ---
 layout: backend
-title: BackEnd Posts
+title: BackEnd
 excerpt: "A List of BackEnd Posts"
 comments: false
 ---
