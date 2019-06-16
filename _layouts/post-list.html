@@ -24,7 +24,12 @@ layout: compress
                 <div class="post-list">
                   {% if page.title == "All Posts" %}
                     {% for post in site.posts %}
-                        {% if post.project == null and post.algorithm ==null %}
+                        {% if post.project == null and
+                          post.algorithm ==null and
+                          post.backend==null and
+                          post.frontend==null and
+                          post.ai==null
+                          %}
                     <ul>
                         <li class="wow fadeInLeft" data-wow-duration="0.5s">
                             <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
