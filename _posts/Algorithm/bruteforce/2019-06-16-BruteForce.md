@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "한글포스팅2"
+title:  "BruteForce"
 date:   2019-06-16
 excerpt: "카테고리 알고리즘"
 category: BruteForce
