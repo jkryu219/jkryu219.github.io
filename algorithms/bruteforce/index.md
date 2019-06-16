@@ -1,6 +1,6 @@
 ---
 layout: post-list
-title: bruteforce
+title: BruteForce
 excerpt: "A List of BruteForce Posts"
 comments: false
 ---
