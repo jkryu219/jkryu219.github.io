@@ -14,6 +14,11 @@
       gtag('js', new Date());
 
       gtag('config', '{{ site.google.analytics }}');
+
+      function closeMenu(){
+        document.getElementById( 'dl-btn' ).classList.remove('dl-active')
+        document.getElementById( 'dl-ul' ).classList.remove('dl-menuopen')
+      }
     </script>
     {% endif %}
     {% if page.comments != false %}

@@ -147,7 +147,7 @@
 		    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a></li>
 		  {% endfor %}
 			<li>
-				<a href="#">Close</a>
+				<a href="javascript:void(0); onclick="closeMenu(this)">Close</a>
 			</li>
 		</ul><!-- /.dl-menu -->
 	</nav><!-- /.dl-menuwrapper -->
