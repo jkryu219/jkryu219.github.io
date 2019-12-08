@@ -3,8 +3,8 @@ layout: post
 title:  "Markdown Syntax"
 date:   2016-03-15
 excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
-category: Example
-example: true
+category: Examples
+examples: true
 tag:
 - markdown
 - syntax

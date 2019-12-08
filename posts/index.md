@@ -1,6 +1,6 @@
 ---
-layout: post
-title: Post
+layout: posts
+title: Posts
 excerpt: "A List of Posts"
 comments: false
 ---
