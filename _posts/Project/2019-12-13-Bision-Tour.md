@@ -125,20 +125,3 @@ Vue.js + Express + MongoDB를 사용하여 구현한 프로젝트입니다.
 #### 3. 이슈 추적 소프트웨어인 지라(Jira)를 통한 팀원 개개인의 진행상황과 이슈를 파악하였음
 #### 4. 깃(Git)을 통해 각자의 브랜치에서 작업한 코드를 기능 단위로 Master 브랜치로 병합(Merge)하였음
 #### 5. 스웨거 API를 통해 Front-End 개발자로 하여금 Back-End의 API를 테스트 할 수 있도록 하였음
-
-# How to Start
-backend 폴더에 config.js, kakaosecret.js 파일(MongoDB Google Kakao Secret Key 포함)이 추가로 필요하지만 개인정보 보호를 위해 첨부하지 않아 해당 소스코드만으로는 정상적인 실행이 불가합니다.
-
-```bash
-/bision_project
-
-$ npm install
-$ npm run serve
-```
-
-```bash
-/backend
-
-$ npm install
-$ npm start
-```
