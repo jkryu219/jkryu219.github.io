@@ -4,6 +4,7 @@ title:  "Bision Tour"
 date:   2019-12-13
 excerpt: "여행자 및 가이드가 사용하는 항공권 및 가이드 예약 기능이 결합된 웹 어플리케이션"
 project: true
+posts: true
 tag:
 - Node
 - Express
