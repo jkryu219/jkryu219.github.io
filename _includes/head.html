@@ -56,3 +56,26 @@
     {% unless feature contains 'http://' or feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{% endcapture %}{% endunless %}
     <style type="text/css">.feature {background-image:url({{ feature }});}</style>
     {% endif %}
+    <style>
+       @media (max-width:1280px){
+         .no-style{
+           display:none;!important
+         }
+       }
+       @media (min-width:1281px){
+         .no-style{
+           list-style:none;
+           position: fixed;
+           top: 8rem;
+           right: 1.2rem;
+           width: 22%;
+           background: white;
+           padding: 2em;
+           border-radius: 3px;
+           overflow:auto;
+         }
+         .no-style ul{
+            list-style:none;
+         }
+       }
+    </style>
