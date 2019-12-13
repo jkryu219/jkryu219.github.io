@@ -25,7 +25,5 @@
     </script>
     {% endif %}
     {% if page.comments != false %}
-      {% if page.layout != "compress"}
         {% include disqus_comments.html %}
-      {% endif %}
     {% endif %}
