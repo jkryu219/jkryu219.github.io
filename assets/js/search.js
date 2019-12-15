@@ -42,6 +42,20 @@
         for(var j=0;j<tokenLen;j++){
           results[i].ref=results[i].ref.replace('%','-')
         }
+        var hyphenLen=results[i].ref.split('-').length
+        var updateRef="";
+        var results[i].ref="";
+        for(var j=0;j<hyphenLen;j++){
+          updateRef=results[i].ref.split('-')[j]
+          if(updateRef>3){
+            updateRef=updateRef.substring(0,2)+'-'+updateRef.substring(2)
+          }
+          if(j!=hyphenLen-1){
+            results[i].ref=results[i].ref+updateRef+'-'
+          }else{
+            results[i].ref=results[i].ref+updateRef
+          }
+        }
       }
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
