@@ -6,8 +6,8 @@
       var appendString = '';
 
       results.sort(
-        function(a,b){
-          return (Number(a.ref.match(/(\d+)/g)[0]) - Number(b.ref.match(/(\d+)/g)[0])));});
+      function(a,b){
+          return (Number(a.ref.match(/(\d+)/g)[0]) - Number((b.ref.match(/(\d+)/g)[0])));})
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
