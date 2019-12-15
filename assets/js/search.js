@@ -52,9 +52,9 @@
             token=results[i].ref.split('-')[j].substring(0,2)+'-'+results[i].ref.split('-')[j].substring(2)
           }
           if(j!=hyphenLen-1){
-            updateRef=results[i].ref+token+'-'
+            updateRef=updateRef+token+'-'
           }else{
-            updateRef=results[i].ref+token
+            updateRef=updateRef+token
           }
         }
         results[i].ref=updateRef;
