@@ -27,8 +27,8 @@
         }
         updateRef = updateRef.toUpperCase(updateRef);
         updateRef = "http://jkryu219.github.io/search/?query=%5B%" + updateRef
+        console.log(updateRef);
         results[i].ref = decodeURI(updateRef).split('=')[1]
-        console.log(results[i]);
       }
 
       results.sort(
