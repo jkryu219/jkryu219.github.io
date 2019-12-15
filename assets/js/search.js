@@ -35,6 +35,7 @@
           return (Number(a.ref.match(/(\d+)/g)[0]) - Number(b.ref.match(/(\d+)/g)[0]));})
 
       for(var i=0;i<results.length;i++){
+        results[i].ref = encodeURI(results[i].ref)
         results[i].ref = results[i].ref.substring(4)
         results[i].ref = results[i].ref.toLowerCase(results[i].ref)
         var tokenLen=results[i].ref.split('%').length
