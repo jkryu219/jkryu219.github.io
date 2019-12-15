@@ -7,9 +7,9 @@
 
       console.log(results);
       for(var i = 0; i < results.length; i++){
-        var splitLen=results2[i].ref.split('-').length;
+        var splitLen=results[i].ref.split('-').length;
         for(j=0;j<splitLen;j++){
-        	results[i].ref=results2[i].ref.replace('-','%');
+        	results[i].ref=results[i].ref.replace('-','%');
         }
 
         var updateRef="";
@@ -44,7 +44,7 @@
           key=key.replace('%','-')
         }
       }
-      
+
       console.log("--------- After Update ----------")
       console.log(results);
 
