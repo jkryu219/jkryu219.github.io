@@ -35,12 +35,11 @@
           return (Number(a.ref.match(/(\d+)/g)[0]) - Number(b.ref.match(/(\d+)/g)[0]));})
 
       for(var i=0;i<results.length;i++){
-        var key=results[i].ref
-        key=key.substring(4)
-        key=key.toLowerCase(key)
-        var tokenLen=key.split('%').length
+        results[i].ref = results[i].ref.substring(4)
+        results[i].ref = results[i].ref.toLowerCase(results[i].ref)
+        var tokenLen=results[i].ref.split('%').length
         for(var j=0;j<tokenLen;j++){
-          key=key.replace('%','-')
+          results[i].ref=results[i].ref.replace('%','-')
         }
       }
 
