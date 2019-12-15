@@ -7,7 +7,7 @@
 
       results.sort(
         function(a,b){
-          return (Number(String(a).match(/(\d+)/g)[0]) - Number((String(b).match(/(\d+)/g)[0])));});
+          return (Number(a.ref.match(/(\d+)/g)[0]) - Number(b.ref.match(/(\d+)/g)[0])));});
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
