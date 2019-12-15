@@ -13,7 +13,7 @@
 
         var updateRef="";
         var len=results[i].ref.split('%').length;
-        for(j=1;j<len;j++){
+        for(j=0;j<len;j++){
         	var tmp=results[i].ref.split('%')[j];
         	if(tmp.length<3){
               if(Number(tmp)<=63){
@@ -26,7 +26,7 @@
           }
         }
 		    updateRef=updateRef.toUpperCase(updateRef);
-		    updateRef="http://jkryu219.github.io/search/?query=%5B%ED"+updateRef
+		    updateRef="http://jkryu219.github.io/search/?query=%5B"+updateRef
         console.log(results[i]);
         results[i].ref=decodeURI(updateRef).split('=')[1]
       }
