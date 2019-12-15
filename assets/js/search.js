@@ -6,35 +6,47 @@
       var appendString = '';
 
       console.log(results);
-      console.log("--------- After ----------")
       for(var i = 0; i < results.length; i++){
-        console.log(results[i].ref)
-        // for(j=0;j<results[i].ref.split('-').length;j++){
-        // 	results[i].ref=results[i].ref.replace('-','%');
-        // }
-        //
-        // var updateRef="";
-        // var len=results[i].ref.split('%').length;
-        // for(j=1;j<len;j++){
-        // 	var tmp=results[i].ref.split('%')[j];
-        // 	if(tmp.length<3){
-        //       if(Number(tmp)<=63){
-        //         updateRef=updateRef+'%'+tmp.substring(0,2);
-        //       }else{
-        //         updateRef=updateRef+tmp;
-        //       }
-        // 	}else{
-        //     updateRef=updateRef+tmp;
-        //   }
-        // }
-        // results[i].ref=updateRef;
+        var splitLen=results2[i].ref.split('-').length;
+        for(j=0;j<splitLen;j++){
+        	results[i].ref=results2[i].ref.replace('-','%');
+        }
+
+        var updateRef="";
+        var len=results[i].ref.split('%').length;
+        for(j=1;j<len;j++){
+        	var tmp=results[i].ref.split('%')[j];
+        	if(tmp.length<3){
+              if(Number(tmp)<=63){
+                updateRef=updateRef+tmp;
+              }else{
+				updateRef=updateRef+'%'+tmp.substring(0,2);
+              }
+        	}else{
+            updateRef=updateRef+tmp;
+          }
+        }
+		    updateRef=updateRef.toUpperCase(updateRef);
+		    updateRef="http://jkryu219.github.io/search/?query=%5B%ED"+updateRef
+        results[i].ref=decodeURI(updateRef).split('=')[1]
       }
-      // console.log("--------- After Update ----------")
-      // console.log(results);
 
       results.sort(
       function(a,b){
           return (Number(a.ref.match(/(\d+)/g)[0]) - Number(b.ref.match(/(\d+)/g)[0]));})
+
+      for(var i=0;i<results.length;i++){
+        var key=results[i].ref
+        key=key.substring(4)
+        key=key.toLowerCase(key)
+        var tokenLen=key.split('%').length
+        for(var j=0;j<tokenLen;j++){
+          key=key.replace('%','-')
+        }
+      }
+      
+      console.log("--------- After Update ----------")
+      console.log(results);
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
