@@ -44,7 +44,7 @@
         }
         var hyphenLen=results[i].ref.split('-').length
         var updateRef="";
-        var results[i].ref="";
+        results[i].ref="";
         for(var j=0;j<hyphenLen;j++){
           updateRef=results[i].ref.split('-')[j]
           if(updateRef>3){
