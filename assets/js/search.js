@@ -8,7 +8,7 @@
       console.log(results);
       console.log("--------- After ----------")
       for(var i = 0; i < results.length; i++){
-        console.log(results[i])
+        console.log(results[i].ref)
         // for(j=0;j<results[i].ref.split('-').length;j++){
         // 	results[i].ref=results[i].ref.replace('-','%');
         // }
