@@ -43,19 +43,20 @@
           results[i].ref=results[i].ref.replace('%','-')
         }
         var hyphenLen=results[i].ref.split('-').length
-        var updateRef="";
-        results[i].ref="";
+        var token=""
+        var updateRef=""
         for(var j=0;j<hyphenLen;j++){
-          updateRef=results[i].ref.split('-')[j]
-          if(updateRef>3){
-            updateRef=updateRef.substring(0,2)+'-'+updateRef.substring(2)
+          token=results[i].ref.split('-')[j]
+          if(token>3){
+            token=results[i].ref.split('-')[j].substring(0,2)+'-'+results[i].ref.split('-')[j].substring(2)
           }
           if(j!=hyphenLen-1){
-            results[i].ref=results[i].ref+updateRef+'-'
+            updateRef=results[i].ref+token+'-'
           }else{
-            results[i].ref=results[i].ref+updateRef
+            updateRef=results[i].ref+token
           }
         }
+        results[i].ref=updateRef;
       }
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
