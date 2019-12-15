@@ -19,7 +19,7 @@
               if(Number(tmp)<=63){
                 updateRef=updateRef+tmp;
               }else{
-				updateRef=updateRef+'%'+tmp.substring(0,2);
+				            updateRef=updateRef+'%'+tmp.substring(0,2);
               }
         	}else{
             updateRef=updateRef+tmp;
@@ -27,6 +27,7 @@
         }
 		    updateRef=updateRef.toUpperCase(updateRef);
 		    updateRef="http://jkryu219.github.io/search/?query=%5B%ED"+updateRef
+        console.log(results[i]);
         results[i].ref=decodeURI(updateRef).split('=')[1]
       }
 
@@ -47,7 +48,7 @@
         var updateRef=""
         for(var j=0;j<hyphenLen;j++){
           token=results[i].ref.split('-')[j]
-          if(token>3){
+          if(token.length>=3){
             token=results[i].ref.split('-')[j].substring(0,2)+'-'+results[i].ref.split('-')[j].substring(2)
           }
           if(j!=hyphenLen-1){
