@@ -48,7 +48,7 @@
         var updateRef = ""
         for (var j = 0; j < tokenLen; j++) {
           if (results[i].ref.split('-')[j].length >= 3) {
-            updateRef = updateRef + results[0].ref.split('-')[j].substring(0, 2) + '-' + results[0].ref.split('-')[j].substring(2) + '-'
+            updateRef = updateRef + results[i].ref.split('-')[j].substring(0, 2) + '-' + results[i].ref.split('-')[j].substring(2) + '-'
           } else {
             if (j != tokenLen - 1) {
               updateRef = updateRef + results[i].ref.split('-')[j] + '-'
