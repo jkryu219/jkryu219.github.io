@@ -6,29 +6,31 @@
       var appendString = '';
 
       console.log(results);
+      console.log("--------- After ----------")
       for(var i = 0; i < results.length; i++){
-        for(j=0;j<results[i].ref.split('-').length;i++){
-        	results[i].ref=results[i].ref.replace('-','%');
-        }
-
-        var updateRef="";
-        var len=results[i].ref.split('%').length;
-        for(j=1;j<len;j++){
-        	var tmp=results[i].ref.split('%')[j];
-        	if(tmp.length<3){
-              if(Number(tmp)<=63){
-                updateRef=updateRef+'%'+tmp.substring(0,2);
-              }else{
-                updateRef=updateRef+tmp;
-              }
-        	}else{
-            updateRef=updateRef+tmp;
-          }
-        }
-        results[i].ref=updateRef;
+        console.log(results[i])
+        // for(j=0;j<results[i].ref.split('-').length;j++){
+        // 	results[i].ref=results[i].ref.replace('-','%');
+        // }
+        //
+        // var updateRef="";
+        // var len=results[i].ref.split('%').length;
+        // for(j=1;j<len;j++){
+        // 	var tmp=results[i].ref.split('%')[j];
+        // 	if(tmp.length<3){
+        //       if(Number(tmp)<=63){
+        //         updateRef=updateRef+'%'+tmp.substring(0,2);
+        //       }else{
+        //         updateRef=updateRef+tmp;
+        //       }
+        // 	}else{
+        //     updateRef=updateRef+tmp;
+        //   }
+        // }
+        // results[i].ref=updateRef;
       }
-      console.log("--------- After Update ----------")
-      console.log(results);
+      // console.log("--------- After Update ----------")
+      // console.log(results);
 
       results.sort(
       function(a,b){
