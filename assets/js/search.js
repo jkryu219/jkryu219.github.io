@@ -5,9 +5,9 @@
     if (results.length) { // Are there any results?
       var appendString = '';
 
-      results.sort(function (a, b) {
-      	return a.ref < b.ref ? -1 : a.ref > b.ref ? 1 : 0;
-      });
+      results.sort(
+        function(a,b){
+          return (Number(a.match(/(\d+)/g)[0]) - Number((b.match(/(\d+)/g)[0])));});
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
