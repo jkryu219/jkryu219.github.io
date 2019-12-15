@@ -44,18 +44,17 @@
         for (var j = 0; j < tokenLen; j++) {
           results[i].ref = results[i].ref.replace('%', '-')
         }
-        var hyphenLen = results[i].ref.split('-').length
-        var token = ""
+
         var updateRef = ""
-        for (var j = 0; j < hyphenLen; j++) {
+        for (var j = 0; j <= tokenLen; j++) {
           results[i].ref.split('-')[j]
           if (results[i].ref.split('-')[j].length >= 3) {
             results[i].ref.split('-')[j] = results[i].ref.split('-')[j].substring(0, 2) + '-' + results[i].ref.split('-')[j].substring(2)
           }
           if (j != hyphenLen - 1) {
-            updateRef = updateRef + token + '-'
+            updateRef = updateRef + results[i].ref.split('-')[j] + '-'
           } else {
-            updateRef = updateRef + token
+            updateRef = updateRef + results[i].ref.split('-')[j]
           }
         }
         results[i].ref = updateRef;
