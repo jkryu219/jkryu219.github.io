@@ -5,8 +5,11 @@
     if (results.length) { // Are there any results?
       var appendString = '';
 
+      results.sort(function (a, b) {
+      	return a.ref < b.ref ? -1 : a.ref > b.ref ? 1 : 0;
+      });
+
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
-        console.log(results);
         var item = store[results[i].ref];
         appendString += '<ul><li class="wow fadeInLeft" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInLeft;"><a class="zoombtn" href="' + item.url + '">' + item.title + '</a><p>' + item.excerpt + '</p><a class="btn zoombtn" href="' + item.url + '">Read More</a></li></ul>';
       }
