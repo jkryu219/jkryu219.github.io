@@ -48,9 +48,9 @@
         var token = ""
         var updateRef = ""
         for (var j = 0; j < hyphenLen; j++) {
-          token = results[i].ref.split('-')[j]
-          if (token.length >= 3) {
-            token = results[i].ref.split('-')[j].substring(0, 2) + '-' + results[i].ref.split('-')[j].substring(2)
+          results[i].ref.split('-')[j]
+          if (results[i].ref.split('-')[j].length >= 3) {
+            results[i].ref.split('-')[j] = results[i].ref.split('-')[j].substring(0, 2) + '-' + results[i].ref.split('-')[j].substring(2)
           }
           if (j != hyphenLen - 1) {
             updateRef = updateRef + token + '-'
