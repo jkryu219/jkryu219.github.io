@@ -6,7 +6,7 @@
       var appendString = '';
 
       for (var i = 0; i < results.length; i++) {
-        results[i].title = store[resulsts[i].ref].title;
+        results[i].title = store[results[i].ref].title;
       }
 
       results.sort(
