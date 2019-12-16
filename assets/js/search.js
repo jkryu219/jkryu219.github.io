@@ -9,10 +9,12 @@
         results[i].title = store[results[i].ref].title;
       }
 
-      results.sort(
-        function(a, b) {
-          return (Number(a.title.match(/(\d+)/g)[0]) - Number(b.title.match(/(\d+)/g)[0]));
-        })
+      if (results.length >= 2) {
+        results.sort(
+          function(a, b) {
+            return (Number(a.title.match(/(\d+)/g)[0]) - Number(b.title.match(/(\d+)/g)[0]));
+          })
+      }
 
       for (var i = 0; i < results.length; i++) { // Iterate over the results
         console.log(results[i]);
