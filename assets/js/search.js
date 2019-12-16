@@ -6,59 +6,13 @@
       var appendString = '';
 
       for (var i = 0; i < results.length; i++) {
-        var splitLen = results[i].ref.split('-').length;
-        for (j = 0; j < splitLen; j++) {
-          results[i].ref = results[i].ref.replace('-', '%');
-        }
-
-        var updateRef = "";
-        var len = results[i].ref.split('%').length;
-        for (j = 0; j < len; j++) {
-          var tmp = results[i].ref.split('%')[j];
-          if (tmp.length < 3) {
-            if (Number(tmp) <= 63) {
-              updateRef = updateRef + tmp;
-            } else {
-              updateRef = updateRef + '%' + tmp.substring(0, 2);
-            }
-          } else {
-            updateRef = updateRef + tmp;
-          }
-        }
-        updateRef = updateRef.toUpperCase(updateRef);
-        updateRef = "http://jkryu219.github.io/search/?query=%5B" + updateRef
-        console.log(updateRef);
-        results[i].ref = decodeURI(updateRef).split('=')[1]
+        results[i].title = store[resulsts[i].ref].title;
       }
 
       results.sort(
         function(a, b) {
-          return (Number(a.ref.match(/(\d+)/g)[0]) - Number(b.ref.match(/(\d+)/g)[0]));
+          return (Number(a.title.match(/(\d+)/g)[0]) - Number(b.title.match(/(\d+)/g)[0]));
         })
-
-      for (var i = 0; i < results.length; i++) {
-        results[i].ref = encodeURI(results[i].ref)
-        results[i].ref = results[i].ref.substring(4)
-        results[i].ref = results[i].ref.toLowerCase(results[i].ref)
-        var tokenLen = results[i].ref.split('%').length
-        for (var j = 0; j < tokenLen; j++) {
-          results[i].ref = results[i].ref.replace('%', '-')
-        }
-
-        var updateRef = ""
-        for (var j = 0; j < tokenLen; j++) {
-          if (results[i].ref.split('-')[j].length >= 3) {
-            updateRef = updateRef + results[i].ref.split('-')[j].substring(0, 2) + '-' + results[i].ref.split('-')[j].substring(2) + '-'
-          } else {
-            if (j != tokenLen - 1) {
-              updateRef = updateRef + results[i].ref.split('-')[j] + '-'
-            } else {
-              updateRef = updateRef + results[i].ref.split('-')[j]
-            }
-          }
-        }
-        results[i].ref = updateRef;
-      }
 
       for (var i = 0; i < results.length; i++) { // Iterate over the results
         console.log(results[i]);
