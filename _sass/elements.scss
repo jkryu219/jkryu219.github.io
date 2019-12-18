@@ -206,3 +206,82 @@ kbd {
     font-weight: 300;
     margin-bottom: 10px;
 }
+
+// ToC에 필요한 CSS
+@media (max-width:1365px){
+  .no-style{
+    display:none;
+  }
+}
+
+@media (min-width:1366px){
+  .no-style{
+    list-style:none;
+    position: fixed;
+    top: 10%;
+    right: 1.5%;
+    width: 16%;
+    background: white;
+    padding: 2em;
+    border-radius: 3px;
+    overflow:auto;
+  }
+  .no-style ul{
+     list-style:none;
+     padding-left:10%;
+  }
+  #markdown-toc ul ul a{
+     display:none;
+  }
+}
+
+@media (min-width:1600px){
+  .no-style{
+    list-style:none;
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    width: 20%;
+    background: white;
+    padding: 2em;
+    border-radius: 3px;
+    overflow:auto;
+  }
+  .no-style ul{
+     list-style:none;
+     padding-left:8%;
+  }
+  #markdown-toc a{
+    text-decoration: none;
+  }
+
+  #markdown-toc ul a{
+    text-decoration: none;
+  }
+
+  #markdown-toc ul ul a{
+     display:block;
+  }
+}
+
+// 포스팅 글자 크기 확대
+p { 
+  display: block;
+  font-size: 1.17em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: normal;
+}
+
+ul > li, ol > li{
+  font-size: 1.17em;
+}
+
+li > p, li > a, li li{
+  font-size: 1em;
+}
+
+// 포스팅 글자 크기 확대로 인한 ToC 크기 복구
+#markdown-toc li {
+  font-size: 1em;
+}
