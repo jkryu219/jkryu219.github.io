@@ -93,11 +93,6 @@
 					<li><a href="{{ site.url }}/posts/examples/">Examples</a></li>
 					<li><a href="{{ site.url }}/posts/blog/">Blog</a></li>
 					<li><a href="{{ site.url }}/posts/diary/">Diary</a></li>
-					<li>
-						<form action="/search" method="get">
-							<input type="text" id="search-box" name="query" placeholder="search" style="width:100%; height:40px; padding-left: 20px;">
-						</form>
-					</li>
 				</ul>
 			</li>
 			<li>
@@ -128,21 +123,25 @@
 				<a href="#">BackEnd</a>
 				<ul class="dl-submenu">
 					<li><a href="{{ site.url }}/backend/">Backend</a></li>
-					<li><a href="{{ site.url }}/backend/java/">Java</a></li>
-					<li><a href="{{ site.url }}/backend/mysql/">MySQL</a></li>
-					<li><a href="{{ site.url }}/backend/db/">DB</a></li>
-					<li><a href="{{ site.url }}/backend/spring/">Spring</a></li>
-					<!-- <li><a href="{{ site.url }}/backend/server/">Server</a></li> -->
+					<li><a href="{{ site.url }}/backend/spring/">Spring</a></li>				
+					<li><a href="{{ site.url }}/backend/Express/">Express</a></li>
+					<li>
+						<a href="#">DataBase</a>
+						<ul class="dl-submenu">
+							<li><a href="{{ site.url }}/backend/mysql/">MySQL</a></li>
+							<li><a href="{{ site.url }}/backend/Express/">MongoDB</a></li>
+						</ul>
+					</li>
 				</ul>
 			</li>
 			<li>
-				<a href="#">AI</a>
+				<a href="#">Programming</a>
 				<ul class="dl-submenu">
-					<li><a href="{{ site.url }}/ai/">AI</a></li>
-					<li><a href="{{ site.url }}/ai/python/">Python</a></li>
-					<!-- <li><a href="{{ site.url }}/ai/mysql/">MySQL</a></li>
-					<li><a href="{{ site.url }}/ai/db/">db</a></li>
-					<li><a href="{{ site.url }}/ai/spring/">Spring</a></li> -->
+					<li><a href="{{ site.url }}/programming/">Programming</a></li>
+					<li><a href="{{ site.url }}/programming/java/">Java</a></li>
+					<li><a href="{{ site.url }}/programming/python/">Python</a></li>
+					<li><a href="{{ site.url }}/programming/cleancode/">CleanCode</a></li>
+					<li><a href="{{ site.url }}/programming/git/">Git</a></li>
 				</ul>
 			</li>
 			{% for link in site.data.navigation %}
@@ -154,7 +153,9 @@
 			<li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer" {% endif %}>{{ link.title }}</a></li>
 			{% endfor %}
 			<li>
-				<a href="javascript:void(0);" onclick="closeMenu(this)">Close</a>
+				<form action="/search" method="get">
+					<input type="text" id="search-box" name="query" placeholder="search" style="width:100%; height:40px; padding-left: 20px;">
+				</form>
 			</li>
 		</ul><!-- /.dl-menu -->
 	</nav><!-- /.dl-menuwrapper -->

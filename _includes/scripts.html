@@ -14,20 +14,6 @@
       gtag('js', new Date());
 
       gtag('config', '{{ site.google.analytics }}');
-
-      document.addEventListener("DOMContentLoaded", function(){
-        closeMenu();
-      });
-
-      function closeMenu(){
-        var body=document.getElementsByTagName('body')[0];
-        var dlmenu=document.getElementById('dl-ul');
-        body.addEventListener('touchstart click',function(e){
-          if(dlmenu.classList.contains('dl-menuopen'))
-            document.getElementsByTagName('body')[0].click();
-            alert('abc')
-        });   
-      };
     </script>
     {% endif %}
     {% if page.comments == true %}

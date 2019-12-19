@@ -1,18 +1,26 @@
 ---
 layout: post
-title:  "BFS 관련 자료 올리면 됨"
-date:   2019-06-16 02:15:52
-excerpt: "카테고리 알고리즘"
-category: BFS
-algorithm: true
-tag: 
-- BFS
+title:  "Markdown Syntax"
+date:   2016-03-15
+excerpt: "Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more."
+category: Examples
+examples: true
+#tag:
+#- markdown
+#- syntax
+#- sample
+#- test
+#- jekyll
 comments: true
 ---
 
-## 와우
+* TOC
+{:toc}
+{: .no-style }
 
-가나다
+## HTML Elements
+
+Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
 # Heading 1
 
@@ -72,13 +80,13 @@ HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, c
 
 ## Code Snippets
 
-~~~ css
+{% highlight css %}
 #container {
   float: left;
   margin: 0 -240px 0 0;
   width: 100%;
 }
-~~~
+{% endhighlight %}
 
 ## Buttons
 
@@ -98,9 +106,9 @@ Make any link standout more when applying the `.btn` class.
 
 You can also use `<kbd>` tag for keyboard buttons.
 
-~~~ html
+{% highlight html %}
 <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>
-~~~
+{% endhighlight %}
 
 Press <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> to move your car. **Midtown Maddness!!**
 
