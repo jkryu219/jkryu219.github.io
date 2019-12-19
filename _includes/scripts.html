@@ -20,7 +20,12 @@
       });
 
       function closeMenu(){
-        document.getElementsByTagName('body')[0].click();
+        var body=document.getElementsByTagName('body')[0];
+        var dlmenu=document.getElementById('dl-ul');
+        body.onclick = function(e){
+          if(dlmenu.classList.contains('dl-menuopen'))
+            document.getElementsByTagName('body')[0].click();
+        };   
       };
     </script>
     {% endif %}
