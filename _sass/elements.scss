@@ -285,3 +285,8 @@ li > p, li > a, li li{
 #markdown-toc li {
   font-size: 1em;
 }
+
+// 아이폰에서 바깥 영역 클릭시 dlmenu 닫기 클릭 이벤트 문제 해결
+.header{
+  cursor: pointer;
+}
