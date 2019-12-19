@@ -12,7 +12,7 @@ locale:             en_US
 url:                https://jkryu219.github.io
 
 # Jekyll
-permalink:          /:title/
+permalink:          /:categories/:title/
 markdown:           kramdown
 highlighter:        rouge
 kramdown:
