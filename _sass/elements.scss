@@ -287,9 +287,8 @@ li > p, li > a, li li{
 }
 
 // 아이폰에서 바깥 영역 클릭시 dlmenu 닫기 클릭 이벤트 문제 해결
-// 아이패드의 경우까지 감안해서 768로 지정하였습니다.
-@media (max-width:1024){
-  .header{
+.header{
+  @media #{$small} {
     cursor: pointer;
-  }
+	}
 }
