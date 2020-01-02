@@ -1,5 +1,5 @@
 {
-  "name": "jkryu219.github.io",
+  "name": "ryureka.github.io",
   "version": "1.0.0",
   "description": "**[Moon](https://taylantatli.github.io/Moon)** is a minimal, one column jekyll theme.",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jkryu219/jkryu219.github.io.git"
+    "url": "git+https://github.com/ryureka/ryureka.github.io.git"
   },
-  "author": "jkryu219",
+  "author": "ryureka",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jkryu219/jkryu219.github.io/issues"
+    "url": "https://github.com/ryureka/ryureka.github.io/issues"
   },
-  "homepage": "https://github.com/jkryu219/jkryu219.github.io#readme",
+  "homepage": "https://github.com/ryureka/ryureka.github.io#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
