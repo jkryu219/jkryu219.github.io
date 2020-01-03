@@ -4,10 +4,11 @@ title:  "GitHub 블로그 만들기(0) - 플랫폼으로 Jekyll 을 선택한 �
 date:   2019-12-17
 excerpt: "플랫폼으로 Jekyll 을 선택한 이유"
 category: Blog
+posts: true
 blog: true
 tag:
 - Jekyll
-- GitHub Blog
+- Blog
 comments: true
 ---
 

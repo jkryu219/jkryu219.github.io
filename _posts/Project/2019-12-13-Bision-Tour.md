@@ -6,10 +6,6 @@ excerpt: "여행자 및 가이드가 사용하는 항공권 및 가이드 예약
 project: true
 posts: true
 tag:
-- Node
-- Express
-- MongoDB
-- Vue
 - Project
 comments: true
 ---

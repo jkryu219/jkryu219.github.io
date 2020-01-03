@@ -1,6 +1,6 @@
 ---
 layout: post-list
-title: DB
-excerpt: "A List of DB Posts"
+title: OS
+excerpt: "A List of OS Posts"
 comments: false
 ---
