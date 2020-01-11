@@ -15,6 +15,49 @@
 
       gtag('config', '{{ site.google.analytics }}');
     </script>
+    <script>
+    document.addEventListener("scroll", function(){
+        activeToc();
+    });  
+
+    const contents = document.querySelector('.content');
+    const hTags = contents.querySelectorAll('h1, h2, h3');
+    const topOffsetHeight = document.querySelector('#dl-menu').offsetHeight; 
+    
+    const findCurrentHTag = function () {      
+      let cnt=0;
+      const centerHeight = window.scrollY - topOffsetHeight; 
+      [...hTags].reduce((pre, cur,idx) => { 
+          if (centerHeight < pre.offsetTop && centerHeight < cur.offsetTop) {
+              return pre; 
+          } 
+          if (pre.offsetTop < centerHeight && centerHeight <= cur.offsetTop) {
+              return pre; 
+          } 
+          cnt++;
+          return cur; 
+      }); 
+      if(cnt>hTags.length-2){
+        cnt=hTags.length-1;
+      }
+      return cnt === 0 ? 0 : cnt-1;
+    };
+    const toc=document.querySelector('#markdown-toc');
+    const tocList=toc.querySelectorAll('a');
+    const activeToc = function () { 
+      let curIdx = findCurrentHTag();
+      let curToc = tocList[curIdx];
+      tocList.forEach( aTag =>{
+        aTag.classList.remove('toc-active');
+      }); 
+      curToc.classList.add('toc-active');
+    };
+
+    tocList.forEach(function(aTag,idx){
+      aTag.classList.add('anchor');
+    });
+
+    </script>
     {% endif %}
     {% if page.comments == true %}
         {% include disqus_comments.html %}
