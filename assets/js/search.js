@@ -8,11 +8,23 @@
       for (var i = 0; i < results.length; i++) {
         results[i].title = store[results[i].ref].title;
       }
-
+      
       if (results.length >= 2) {
         results.sort(
           function(a, b) {
-            return (Number(a.title.match(/(\d+)/g)[0]) - Number(b.title.match(/(\d+)/g)[0]));
+            const aNumArrLen=a.title.match(/(\d+)/g).length;
+            const bNumArrLen=b.title.match(/(\d+)/g).length;
+            let numArrLen=0;
+            aNumArrLen <= bNumArrLen ? numArrLen = aNumArrLen : bNumArrLen;
+            for (let idx = 0; idx < numArrLen; idx++) {
+              if((Number(a.title.match(/(\d+)/g)[idx]) !== Number(b.title.match(/(\d+)/g)[idx]))){
+                return (Number(a.title.match(/(\d+)/g)[idx]) - Number(b.title.match(/(\d+)/g)[idx]));
+              }
+              // if((Number(a.title.match(/(\d+)/g)[0]) === Number(b.title.match(/(\d+)/g)[0]))){
+              //   return (Number(a.title.match(/(\d+)/g)[1]) - Number(b.title.match(/(\d+)/g)[1]));              
+              // }
+              // return (Number(a.title.match(/(\d+)/g)[0]) - Number(b.title.match(/(\d+)/g)[0]));
+            }
           })
       }
 
