@@ -246,7 +246,7 @@ kbd {
   .toc{
     position: relative;
     display:block;
-    height:150px;
+    height:250px;
     width:80%;
     margin:auto;
     padding-left: 5%;
@@ -276,7 +276,7 @@ kbd {
   }
 }
 
-@media (min-width:1366px){
+@media (min-width:1279px){
   .toc{
     list-style:none;
     position: fixed;
