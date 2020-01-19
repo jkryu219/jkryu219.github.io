@@ -14,7 +14,7 @@ comments: true
 
 * TOC
 {:toc}
-{: .no-style }
+{: .toc }
 
 - ## 타 플랫폼 대비 Github 블로그의 장점  
 **1. 마크다운 파일(.md)로 포스팅이 가능합니다.**  

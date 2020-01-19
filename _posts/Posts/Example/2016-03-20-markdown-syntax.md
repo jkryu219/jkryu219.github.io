@@ -16,7 +16,7 @@ comments: true
 
 * TOC
 {:toc}
-{: .no-style }
+{: .toc }
 
 ## HTML Elements
 

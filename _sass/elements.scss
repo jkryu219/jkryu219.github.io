@@ -107,9 +107,9 @@ hr {
 // images and figures
 img {
     display: block;
-	max-width: 100%;
+    max-width: 100%;
     width: auto;
-    height: auto;
+    height: auto;    
     vertical-align: middle;
     margin-left: auto;
     margin-right: auto;
@@ -208,14 +208,76 @@ kbd {
 }
 
 // ToC에 필요한 CSS
-@media (max-width:1365px){
-  .no-style{
-    display:none;
+@media (max-width:480px){
+  .toc{
+    position: relative;
+    display:block;
+    height:150px;
+    width:80%;
+    margin:auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow-y:scroll;
+    background-color: rgb(245, 245, 245);
+  }
+  #markdown-toc {
+    list-style:none;
+  }
+  .toc ul {
+    list-style:none;
+    padding-left:10%;
+  }
+  #markdown-toc ul ul a{
+      display:none;
+  }
+  #markdown-toc a{
+    text-decoration: none;
+  }
+
+  #markdown-toc ul a{
+    text-decoration: none;
+  }
+  #markdown-toc .toc-active{
+    color: black;
+  }
+}
+
+@media (min-width:481px){
+  .toc{
+    position: relative;
+    display:block;
+    height:150px;
+    width:80%;
+    margin:auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow-y:scroll;
+    background-color: rgb(245, 245, 245);
+  }
+  #markdown-toc {
+    list-style:none;
+  }
+  .toc ul {
+    list-style:none;
+    padding-left:10%;
+  }
+  #markdown-toc ul ul a{
+      display:none;
+  }
+  #markdown-toc a{
+    text-decoration: none;
+  }
+
+  #markdown-toc ul a{
+    text-decoration: none;
+  }
+  #markdown-toc .toc-active{
+    color: black;
   }
 }
 
 @media (min-width:1366px){
-  .no-style{
+  .toc{
     list-style:none;
     position: fixed;
     top: 10%;
@@ -224,19 +286,23 @@ kbd {
     background: white;
     padding: 2em;
     border-radius: 3px;
-    overflow:auto;
+    height:auto;
+    overflow-y:scroll;
   }
-  .no-style ul{
+  .toc ul{
      list-style:none;
      padding-left:10%;
   }
   #markdown-toc ul ul a{
      display:none;
   }
+  #markdown-toc .toc-active{
+    color: #ff4136;
+  }
 }
 
 @media (min-width:1600px){
-  .no-style{
+  .toc{
     list-style:none;
     position: fixed;
     top: 10%;
@@ -245,9 +311,10 @@ kbd {
     background: white;
     padding: 2em;
     border-radius: 3px;
-    overflow:auto;
+    height:auto;
+    overflow-y:scroll;
   }
-  .no-style ul{
+  .toc ul{
      list-style:none;
      padding-left:8%;
   }
@@ -262,10 +329,9 @@ kbd {
   #markdown-toc ul ul a{
      display:block;
   }
-}
-
-#markdown-toc .toc-active{
-  color: #ff4136;
+  #markdown-toc .toc-active{
+    color: #ff4136;
+  }
 }
 // 포스팅 글자 크기 확대
 p { 

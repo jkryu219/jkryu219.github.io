@@ -6,7 +6,9 @@
     const contents = document.querySelector('.content');
     const hTags = contents.querySelectorAll('h1, h2, h3');
     const topOffsetHeight = document.querySelector('#dl-menu').offsetHeight; 
-    
+    if(hTags.length>20){
+      document.querySelector('.toc').style.height='82%';
+    }
     const findCurrentHTag = function () {      
       let cnt=0;
       const centerHeight = window.scrollY - topOffsetHeight; 
