@@ -6,9 +6,20 @@
     const contents = document.querySelector('.content');
     const hTags = contents.querySelectorAll('h1, h2, h3');
     const topOffsetHeight = document.querySelector('#dl-menu').offsetHeight; 
+
+    if(window.innerWidth <= 1279){
+      var refElement = document.getElementById("markdown-toc");
+      var parent = refElement.parentNode;
+      var newDiv = document.createElement("div");
+      parent.insertBefore(newDiv, refElement);
+      newDiv.innerHTML="목차";
+      newDiv.classList.add('fakeH1');
+    }
+
     if(hTags.length>20 && window.innerWidth > 1279){
       document.querySelector('.toc').style.height='82%';
     }
+
     const findCurrentHTag = function () {      
       let cnt=0;
       const centerHeight = window.scrollY - topOffsetHeight; 
