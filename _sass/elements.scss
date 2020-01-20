@@ -285,13 +285,16 @@ kbd {
     list-style:none;
     position: fixed;
     top: 10%;
+    width: 14.7%;
     right: 1.5%;
-    width: 16%;
     background: white;
     padding: 2em;
     border-radius: 3px;
     height:auto;
     overflow-y:scroll;
+    font-size: 0.8rem;
+    word-spacing: -0.75px;
+    letter-spacing: -0.75px;
   }
   .toc ul{
      list-style:none;
