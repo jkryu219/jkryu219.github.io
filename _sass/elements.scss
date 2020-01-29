@@ -211,10 +211,9 @@ kbd {
 @media (max-width:480px){
   .toc{
     position: relative;
-    display:block;
-    height:150px;
-    width:80%;
-    margin:auto;
+    display: block;
+    width: 80%;
+    margin: auto;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 2%;
@@ -247,10 +246,9 @@ kbd {
 @media (min-width:481px){
   .toc{
     position: relative;
-    display:block;
-    height:250px;
-    width:80%;
-    margin:auto;
+    display: block;
+    width: 80%;
+    margin: auto;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 5%;
@@ -290,7 +288,6 @@ kbd {
     background: white;
     padding: 2em;
     border-radius: 3px;
-    height:auto;
     overflow-y:scroll;
     font-size: 0.8rem;
     word-spacing: -0.75px;
@@ -318,7 +315,6 @@ kbd {
     background: white;
     padding: 2em;
     border-radius: 3px;
-    height:auto;
     overflow-y:scroll;
   }
   .toc ul{

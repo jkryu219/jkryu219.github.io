@@ -47,10 +47,22 @@
         newDiv.innerHTML="목차";
         newDiv.classList.add('fakeH1');
       }
+      /* 좁은 화면에서 */
+      if(hTags.length<8){ /* 전체 목차 개수가 8개 보다 작으면 ToC 모두 나오도록 지정 */
+          document.querySelector(".toc").style.height="auto";
+      }else{ /* 전체 목차 개수가 8개 보다 크면 ToC 일부만 나오도록 지정 */ 
+        if(window.innerWidth > 480){/* 스마트폰보다 큰 화면이면 ToC 높이 250px로 지정 */
+            document.querySelector(".toc").style.height="250px";
+        }else{ /* 스마트폰보다 작은 화면이면 ToC 높이 150px로 지정 */
+          document.querySelector(".toc").style.height="150px";
+        }
+      }
     }
-    else{
-      if(hTags.length>20){
+    else{ /* 넓은 화면에서 */
+      if(hTags.length>20){ /* 전체 목차 개수 20개 보다 많으면 overflow 처리를 위해 높이 적절히 화면의 82%로 지정 */
         document.querySelector(".toc").style.height="82%";
+      }else{
+        document.querySelector(".toc").style.height="auto";
       }
     }    
 
@@ -65,13 +77,26 @@
           newDiv.innerHTML="목차";
           newDiv.classList.add('fakeH1');
         }
+        /* 좁은 화면에서 */
+        if(hTags.length<8){ /* 전체 목차 개수가 8개 보다 작으면 ToC 모두 나오도록 지정 */
+          document.querySelector(".toc").style.height="auto";
+        }else{ /* 전체 목차 개수가 8개 보다 크면 ToC 일부만 나오도록 지정 */
+          if(window.innerWidth > 480){/* 스마트폰보다 큰 화면이면 ToC 높이 250px로 지정 */
+            document.querySelector(".toc").style.height="250px";
+          }else{ /* 스마트폰보다 작은 화면이면 ToC 높이 150px로 지정 */
+            document.querySelector(".toc").style.height="150px";
+          }
+        }
       }else{
         if(document.querySelector('#divTOC')!==null){
           var divTOC=document.querySelector("#divTOC");
           document.querySelector(".content").removeChild(divTOC);
         }
-        if(hTags.length>20){
+        /* 넓은 화면에서 */
+        if(hTags.length>20){ /* 전체 목차 개수 20개 보다 많으면 overflow 처리를 위해 높이 적절히 화면의 82%로 지정 */
           document.querySelector(".toc").style.height="82%";
+        }else{ 
+          document.querySelector(".toc").style.height="auto";
         }
       }
     });
