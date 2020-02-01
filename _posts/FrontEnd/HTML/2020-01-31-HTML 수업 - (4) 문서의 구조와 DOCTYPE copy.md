@@ -2,7 +2,7 @@
 layout: post
 title: "[생활코딩] HTML 수업 - (4) 문서의 구조와 DOCTYPE"
 date:   2020-01-31 21:00:00 +09:00
-excerpt: "'문서의 구조와 DOCTYPE'에 대하여 알아보겠습니다."
+excerpt: "HTML '문서의 구조와 DOCTYPE'에 대하여 알아보겠습니다."
 category: HTML
 frontend: true
 posts: true
@@ -22,7 +22,7 @@ comments: true
 
 # HTML 문서의 구조  
 문서의 구조를 나타내는 html ,head, body 태그에 대하여 알아보겠습니다.
-## 문서의 구조를 나타내는 Tag 적용 전
+## 문서의 구조를 나타내는 태그 적용 전
 ~~~ html
 <h1>HTML</h1>
 <ol>
@@ -40,8 +40,9 @@ comments: true
 ~~~
 
 
-## 문서의 구조를 나타내는 Tag 적용 후(html,head,body)
+## 문서의 구조를 나타내는 태그 적용 후 (html, head, body)
 ~~~ html
+<!DOCTYPE html>
 <html>
 <head>
     <title>HTML - 수업소개</title>
@@ -74,7 +75,7 @@ comments: true
 
 # DOCTYPE
 ## DOCTYPE이란?
-document type declaration의 약자로 계속해서 변하는 html의 버전에 따라 tag의 존재유무나 쓰임이 달라질 수 있기때문에 어떠한 버전에 따라서 문서를 작성했는지를 알려주기 위해 사용합니다.
+document type declaration의 약자로 계속해서 변하는 [HTML의 버전에 따라 태그의 존재유무나 쓰임](http://www.martinrinehart.com/frontend-engineering/engineers/html/html-tag-history.html)이 달라질 수 있기때문에 어떠한 버전에 따라서 문서를 작성했는지를 알려주기 위해 사용합니다.
 
 ~~~ 
 <!DOCTYPE html>
