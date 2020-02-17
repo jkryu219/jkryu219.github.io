@@ -21,7 +21,7 @@ comments: true
 {: .toc }
 
 # HTML 문서의 구조  
-문서의 구조를 나타내는 html ,head, body 태그에 대하여 알아보겠습니다.
+문서의 구조를 나타내는 html, head, body 태그에 대하여 알아보겠습니다.
 ## 문서의 구조를 나타내는 태그 적용 전
 ~~~ html
 <h1>HTML</h1>
