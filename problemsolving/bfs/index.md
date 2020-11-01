@@ -1,6 +1,6 @@
 ---
 layout: post-list
-title: Optimization
-excerpt: "A List of Optimization Posts"
+title: BFS
+excerpt: "A List of BFS Posts"
 comments: false
 ---
