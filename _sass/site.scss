@@ -113,9 +113,26 @@ body {
 	box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
 	@include transition(.5s);
 	@media #{$small} {
-		width: 95%;
+		max-width:100vw;
+		margin: 0 0;
+		width: 100%;
 		padding: 2em 0;
-	    box-shadow: none;
+		box-shadow: none;
+	}
+	@media #{$medium} {
+		max-width:100vw;
+		width: 100%;
+		padding: 2em 0;
+		box-shadow: none;
+		margin: 0 0;
+		border-radius: 0px;
+	}
+	@media only screen and (min-width: 48.1em) and (max-width: 64em) {
+		max-width: 90vw;
+		width:100%;
+		padding: 2em 2em;
+		box-shadow: none;
+		border-radius: 0px;
 	}
 }
 #disqus_thread {
@@ -132,6 +149,21 @@ body {
 		width: 90%;
 		padding: 2em 0;
 	    box-shadow: none;
+	}
+	@media #{$medium} {
+		width: 100%;
+		padding: 2em 2em;
+		box-shadow: none;
+		margin: 0 0;
+		border-radius: 0px;
+	}
+	@media only screen and (min-width: 48.1em) and (max-width: 64em){
+		max-width:90vw;
+		width: 100%;
+		padding: 2em 2em;
+		box-shadow: none;
+		margin: -3rem auto 4rem auto;
+		border-radius: 0px;
 	}
 }
 // entry meta
@@ -171,12 +203,7 @@ body {
 		}
 	}
 }
-header .entry-meta {
-	display: none; // hide header meta on small screens
-	@media #{$notsmall} {
-		display: block;
-	}
-}
+
 .entry-title a {
     text-decoration: none;
 }
