@@ -2,6 +2,5 @@ _site
 .sass-cache
 .jekyll-metadata
 node_modules
-_config
 .DS_Store
 .vscode
