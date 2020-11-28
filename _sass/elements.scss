@@ -364,6 +364,14 @@ li > p, li > a, li li{
   text-align: center;
 }
 
+.centered { 
+  display: table; 
+  margin-left: auto; 
+  margin-right: auto; 
+  word-break: break-word;
+  text-align: center;
+}
+
 .fakeH1{
   display: block;
   font-size: 2em;
@@ -372,4 +380,19 @@ li > p, li > a, li li{
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+}
+
+//
+.indent1 {
+  padding-left:35px;
+  font-size: 1rem;
+}
+
+ul {
+  padding-left:35px;
+}
+
+.li_circle {
+  list-style-type: circle;
+  font-size: 1rem;
 }
