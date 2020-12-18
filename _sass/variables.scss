@@ -34,7 +34,7 @@ $doc-font-size       : 16;
 $doc-line-height     : 26;
 
 //media
-$small               : "only screen and (max-width: 30em)";
-$medium              : "only screen and (min-width: 30.1em) and (max-width: 48em)";
-$large               : "only screen and (min-width: 48.1em) and (max-width: 62.5em)";
-$notsmall            : "only screen and (min-width: 48em)";
+$small               : "only screen and (max-width: 480px)";
+$medium              : "only screen and (min-width: 481px) and (max-width: 768px)";
+$large               : "only screen and (min-width: 769px) and (max-width: 1000px)";
+$notsmall            : "only screen and (min-width: 768px)";
