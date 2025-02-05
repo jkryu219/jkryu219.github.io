@@ -4,7 +4,7 @@
   "description": "**[Moon](https://taylantatli.github.io/Moon)** is a minimal, one column jekyll theme.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "stop": "npm start"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ryureka/ryureka.github.io#readme",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "gulp-shell": "^0.7.1"
   }
